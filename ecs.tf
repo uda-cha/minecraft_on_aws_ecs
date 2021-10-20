@@ -41,6 +41,10 @@ resource "aws_ecs_task_definition" "minecraft-on-ecs-task" {
             name  = "TYPE"
             value = "PAPER"
           },
+          {
+            name  = "MEMORY"
+            value = var.aws-ecs-container-java-memory-heap
+          },
         ]
         essential = true
         image     = "itzg/minecraft-server:java16"

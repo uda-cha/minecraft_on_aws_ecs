@@ -18,6 +18,10 @@ variable "aws-ecs-container-memory-reservation" {
   type    = number
   default = 1024
 }
+variable "aws-ecs-container-java-memory-heap" {
+  type    = string
+  default = "1500M"
+}
 variable "aws-region" {
   type    = string
   default = "ap-northeast-1"
